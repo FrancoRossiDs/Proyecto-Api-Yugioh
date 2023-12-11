@@ -92,10 +92,16 @@ tipoSelect.addEventListener('change', () => {
         monsterFilters.style.display = 'block';
         reset.style.display = 'block';
     } else if (selectedType === 'spell') {
+        filters.attribute = null;
+        filters.monsterClass = null;
+        filters.level = null;
         footer.style.display = 'none';
         spellFilters.style.display = 'block';
         reset.style.display = 'block';
     } else if (selectedType === 'trap') {
+        filters.attribute = null;
+        filters.monsterClass = null;
+        filters.level = null;
         footer.style.display = 'none';
         trapFilters.style.display = 'block';
         reset.style.display = 'block';
