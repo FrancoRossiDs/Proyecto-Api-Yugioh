@@ -7,7 +7,7 @@ import { cardsByType } from './Cards/typeCards.mjs';
 const main = document.querySelector('main');
 
 
-const reset= document.querySelector('#resetButton');
+const reset = document.querySelector('#resetButton');
 const monsterFilters = document.getElementById('monsterFilters');
 const spellFilters = document.getElementById('spellFilters');
 const trapFilters = document.getElementById('trapFilters');
@@ -22,7 +22,7 @@ const search = document.querySelector('#searchInput');
 const type = document.querySelector('#tipo');
 const footer = document.querySelector('footer');
 
-function inicio(){
+function inicio() {
     getCharacters();
     footer.style.display = 'block';
 }
@@ -68,20 +68,21 @@ reset.addEventListener('click', () => {
 type.addEventListener('change', (e) => {
     if (e.target.value === "null") {
         footer.style.display = 'none';
-        filters.id= null;
+        filters.id = null;
         cardsByType(filters);
     } else {
         footer.style.display = 'none';
-        filters.id= e.target.value;
+        filters.id = e.target.value;
         cardsByType(filters);
-}});
+    }
+});
 
 tipoSelect.addEventListener('change', () => {
     const selectedType = tipoSelect.value;
 
     filters.type = null;
-    filters.spellType = null;  
-    filters.trapType = null;   
+    filters.spellType = null;
+    filters.trapType = null;
     monsterFilters.style.display = 'none';
     spellFilters.style.display = 'none';
     trapFilters.style.display = 'none';
@@ -117,7 +118,7 @@ async function displayresult(result) {
         const cardElement = document.createElement('div');
         cardElement.classList.add('card');
         cardElement.innerHTML = `<img src="${card.card_images[0].image_url}" alt="${card.name}">`;
-        main.appendChild(cardElement); 
+        main.appendChild(cardElement);
     });
 }
 
@@ -126,6 +127,19 @@ search.addEventListener('blur', (e) => {
     if (e.target.value === "") {
         inicio();
     } else {
+        filters.attribute = null;
+        filters.monsterClass = null;
+        filters.level = null;
+        filters.type = null;
+        filters.spellType = null;
+        filters.trapType = null;
+        tipoSelect.value = 'null';
+        atributo.value = 'null';
+        typo.value = 'null';
+        clase.value = 'null';
+        nivel.value = 'null';
+        spell.value = 'null';
+        trap.value = 'null';
         footer.style.display = 'none';
         filters.name = e.target.value;
         cardsByType(filters);
@@ -136,11 +150,24 @@ search.addEventListener('keydown', (e) => {
     if (e.target.value === "") {
         inicio();
     } else if (e.key === "Enter") {
+        filters.attribute = null;
+        filters.monsterClass = null;
+        filters.level = null;
+        filters.type = null;
+        filters.spellType = null;
+        filters.trapType = null;
+        tipoSelect.value = 'null';
+        atributo.value = 'null';
+        typo.value = 'null';
+        clase.value = 'null';
+        nivel.value = 'null';
+        spell.value = 'null';
+        trap.value = 'null';
         footer.style.display = 'none';
         filters.name = e.target.value;
         cardsByType(filters);
     } else if (e.key === "Escape") {
-        e.target.value = "";  
+        e.target.value = "";
         inicio();
     }
 });
@@ -163,12 +190,12 @@ typo.addEventListener('change', (e) => {
         footer.style.display = 'none';
         filters.type = null;
         cardsByType(filters);
-    }else{
+    } else {
         footer.style.display = 'none';
         filters.type = e.target.value;
         cardsByType(filters);
     }
-    
+
 });
 
 clase.addEventListener('change', (e) => {
@@ -176,7 +203,7 @@ clase.addEventListener('change', (e) => {
         footer.style.display = 'none';
         filters.monsterClass = null;
         cardsByType(filters);
-    }else{
+    } else {
         footer.style.display = 'none';
         filters.monsterClass = e.target.value;
         cardsByType(filters);
@@ -188,16 +215,16 @@ nivel.addEventListener('change', (e) => {
         footer.style.display = 'none';
         filters.level = null;
         cardsByType(filters);
-    }else{
+    } else {
         footer.style.display = 'none';
         filters.level = e.target.value;
         cardsByType(filters);
-    } 
+    }
 });
 
 spell.addEventListener('change', (e) => {
-    console.log(e.target.value); 
-    if(e.target.value === "null"){
+    console.log(e.target.value);
+    if (e.target.value === "null") {
         footer.style.display = 'none';
         filters.type = null;
         cardsByType(filters);
@@ -219,4 +246,4 @@ trap.addEventListener('change', (e) => {
 });
 
 
-export {displayresult}
+export { displayresult }
