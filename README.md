@@ -15,7 +15,7 @@ This web application leverages the Yu-Gi-Oh API to provide a user-friendly inter
 
 ## Usage
 
-Visit the hosted application on GitHub Pages: [Yu-Gi-Oh Card Search]([https://your-username.github.io/your-repo/](https://francorossids.github.io/Proyecto-Api-Yugioh/))
+Visit the hosted application on GitHub Pages: [Yu-Gi-Oh Card Search]([https://your-username.github.io/your-repo/](https://francorossids.github.io/Proyecto-Api-Yugioh/)
 
 ## Filters
 
