@@ -15,7 +15,7 @@ Esta aplicación web utiliza la API de Yu-Gi-Oh para proporcionar una interfaz a
 
 ## Uso
 
-Visita la aplicación alojada en GitHub Pages: [Búsqueda de Cartas de Yu-Gi-Oh](https://your-username.github.io/your-repo/)
+Visita la aplicación alojada en GitHub Pages: [Búsqueda de Cartas de Yu-Gi-Oh](https://francorossids.github.io/Proyecto-Api-Yugioh/)
 
 ## Filtros
 
