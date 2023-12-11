@@ -57,6 +57,12 @@ reset.addEventListener('click', () => {
     filters.trapType = null;
     search.value = '';
     tipoSelect.value = 'null';
+    atributo.value = 'null';
+    typo.value = 'null';
+    clase.value = 'null';
+    nivel.value = 'null';
+    spell.value = 'null';
+    trap.value = 'null';
 })
 
 type.addEventListener('change', (e) => {
