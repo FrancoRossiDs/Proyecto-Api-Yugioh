@@ -1,0 +1,145 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/styles/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div>
+            <input type="text" id="searchInput" placeholder="Buscar cartas...">
+            <button id="searchButton">Buscar</button>
+        </div>
+        <div>
+            <select name="tipo" id="tipo">
+                <option value="null" >Todos</option>
+                <option value="monster">Monstruo</option>
+                <option value="spell">Magia</option>
+                <option value="trap">Trampa</option>
+            </select>
+        </div>
+        <div id="monsterFilters" style="display: none;">
+            <label for="atributo"></label>
+            <select name="atributo" id="atributo">
+                <option value="null">Atributo</option>
+                <option value="dark">Oscuridad</option>
+                <option value="earth">Tierra</option>
+                <option value="fire">Fuego</option>
+                <option value="light">Luz</option>
+                <option value="water">Agua</option>
+                <option value="wind">viento</option>
+            </select>
+
+            <label for="type"></label>
+            <select name="type" id="type">
+                <option value="null">Tipo</option>
+                <option value="aqua">Aqua</option>
+                <option value="beast">Bestia</option>
+                <option value="beast-warrior">Guerrero-Bestia</option>
+                <option value="cyberse">Ciberso</opton>
+                <option value="dinosaur">Dinosaurio</option>
+                <option value="dragon">Dragon</option>
+                <option value="fairy">Hada</option>
+                <option value="fiend">Demonio</option>
+                <option value="dish">Pez</option>
+                <option value="insect">Insecto</option>
+                <option value="machine">Maquina</option>
+                <option value="plant">Plant</option>
+                <option value="psychic">Psíquico</option>
+                <option value="pyro">Piro</option>
+                <option value="reptile">Reptil</option>
+                <option value="rock">Roca</option>
+                <option value="sea serpent">Serpiente Marina</option>
+                <option value="spellcaster">Lanzador de Conjuros</option>
+                <option value="thunder">Trueno</option>
+                <option value="warrior">Guerrero</option>
+                <option value="winged beast">Bestia Alada</option>
+                <option value="wyrm">Wyrm</option>
+                <option value="zombie">Zombi</option>
+                <option value="divine-beast">Bestia Divina</option>
+                <option value="creator-god">Dios Creador</option>
+            </select>
+
+            <label for="class"></label>
+            <select name="class" id="clase">
+                <option value="null">Clase de Monstruos</option>
+                <option value="normal">Normal</option>
+                <option value="effect">Efecto</option>
+                <option value="gemini">Gemini</option>
+                <option value="union">Union</option>
+                <option value="flip">Volteo</option>
+                <option value="spirit">Espiritu</option>
+                <option value="tuner">Cantante</option>
+                <option value="pendulum">Pendulo</option>
+                <option value="ritual">Ritual</option>
+                <option value="fusion">Fusion</option>
+                <option value="synchro">Sincronía</option>
+                <option value="xyz">Xyz</option>
+                <option value="link">Enlace</option>
+                <option value="token">Token</option>
+            </select>
+        
+            <label for="nivel" ></label>
+            <select name="nivel" id="nivel">
+                <option value="null">Nivel/Rango/Link</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+            </select>
+        
+        </div>
+        
+        <div id="spellFilters" style="display: none;">
+            <label for="spellType"></label>
+            <select name="spellType" id="spellType">
+                <option value="null" selected>Tipo de Magia</option>
+                <option value="normal">Normal</option>
+                <option value="field">Campo</option>
+                <option value="continuous">Continuo</option>
+                <option value="quick-Play">Quick-Play</option>
+                <option value="ritual">Ritual</option>
+                <option value="equip">Equipamiento</option>
+            </select>
+        </div>
+        
+        <div id="trapFilters" style="display: none;">
+            <label for="trapType"></label>
+            <select name="trapType" id="trapType">
+                <option value="null" selected>Tipo de Trampa</option>
+                <option value="normal">Normal</option>
+                <option value="continuous">Continuo</option>
+                <option value="counter">Contra Efecto</option>
+            </select>
+        </div>
+
+        <div>
+            <button id="resetButton" style="display: none;">
+                Resetear filtros
+            </button>
+        </div>
+    </header>
+    <main>
+    </main>
+    <footer id="footer">
+        <button id="prevButton">Página Anterior</button>
+        <button id="nextButton">Siguiente Página</button>
+    </footer>
+    <script type="module" src="./src/main.mjs"></script>
+</body>
+
+</html>
