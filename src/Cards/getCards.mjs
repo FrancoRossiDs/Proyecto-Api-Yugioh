@@ -1,4 +1,4 @@
-// getCards.mjs
+// Funcion para imprimir todas las cartas, sin filtro
 const getCharacters = async (page = 1) => {
     const main = document.querySelector('main');
     main.innerHTML = '';
@@ -10,7 +10,7 @@ const getCharacters = async (page = 1) => {
     const info = await res.json();
 
     const cardsToDisplay = info.data.slice(start, end);
-
+    //Crear div, se agrega carta y le da la clase 'card'
     cardsToDisplay.forEach(card => {
         const cardElement = document.createElement('div');
         cardElement.classList.add('card');
