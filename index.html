@@ -13,10 +13,12 @@
 <body>
     <header>
         <div>
+            <!--Input para buscar carta a través de buscador  -->
             <input type="text" id="searchInput" placeholder="Buscar cartas...">
             <button id="searchButton">Buscar</button>
         </div>
         <div>
+            <!--select para los tres tipos principales de cartas, Mosntruo, Magia y Trampa  -->
             <select name="tipo" id="tipo">
                 <option value="null" >Todos</option>
                 <option value="monster">Monstruo</option>
@@ -24,6 +26,7 @@
                 <option value="trap">Trampa</option>
             </select>
         </div>
+        <!--select para 1 de los 6 atributos que los Monstruos pueden tener  -->
         <div id="monsterFilters" style="display: none;">
             <label for="atributo"></label>
             <select name="atributo" id="atributo">
@@ -35,7 +38,7 @@
                 <option value="water">Agua</option>
                 <option value="wind">Viento</option>
             </select>
-
+        <!--select para 1 de los 24 tipos que los Monstruos pueden tener  -->
             <label for="type"></label>
             <select name="type" id="type">
                 <option value="null" selected>Tipo</option>
@@ -47,7 +50,7 @@
                 <option value="dragon">Dragon</option>
                 <option value="fairy">Hada</option>
                 <option value="fiend">Demonio</option>
-                <option value="dish">Pez</option>
+                <option value="fish">Pez</option>
                 <option value="insect">Insecto</option>
                 <option value="machine">Maquina</option>
                 <option value="plant">Plant</option>
@@ -65,7 +68,7 @@
                 <option value="divine-beast">Bestia Divina</option>
                 <option value="creator-god">Dios Creador</option>
             </select>
-
+        <!--select para 1 de los 14 clase de monstruo que existen  -->
             <label for="class"></label>
             <select name="class" id="clase">
                 <option value="null" selected>Clase de Monstruos</option>
@@ -84,7 +87,7 @@
                 <option value="link">Enlace</option>
                 <option value="token">Token</option>
             </select>
-        
+        <!--select para los niveles, rango o valor Link que los monstruos pueden tener  -->
             <label for="nivel" ></label>
             <select name="nivel" id="nivel">
                 <option value="null" selected>Nivel/Rango/Link</option>
@@ -103,7 +106,7 @@
             </select>
         
         </div>
-        
+        <!--select para 1 de los 6 tipos de cartas Mágicas pueden existir  -->
         <div id="spellFilters" style="display: none;">
             <label for="spellType"></label>
             <select name="spellType" id="spellType">
@@ -116,7 +119,7 @@
                 <option value="equip">Equipamiento</option>
             </select>
         </div>
-        
+        <!--select para 1 de los 3 tipos de cartas Trampas pueden existir  -->
         <div id="trapFilters" style="display: none;">
             <label for="trapType"></label>
             <select name="trapType" id="trapType">
@@ -128,6 +131,7 @@
         </div>
 
         <div>
+            <!-- Botón de reset -->
             <button id="resetButton" style="display: none;">
                 Resetear filtros
             </button>
@@ -135,6 +139,7 @@
     </header>
     <main>
     </main>
+    <!-- Footer con los botones para cambiar entre páginas -->
     <footer id="footer">
         <div class="boton">
             <button id="prevButton">Página Anterior</button>
