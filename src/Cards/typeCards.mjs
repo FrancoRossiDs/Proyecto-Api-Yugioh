@@ -11,7 +11,7 @@ const cardsByType = async (filters) => {
     let result = info.data;
     //Si hay valor de name en el array de filtros, lo aplica a info
     if (filters.name) {
-        result = result.filter(card => card.name.toLowerCase().includes(filters.name)||card.desc.toLowerCase().includes(filters.name.toLowerCase()));
+        result = result.filter(card => card.name.toLowerCase().includes(filters.name.toLowerCase())||card.desc.toLowerCase().includes(filters.name.toLowerCase()));
     }
     //Si hay valor de id en el array de filtros, lo aplica a info
     if(filters.id){
