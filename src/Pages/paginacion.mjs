@@ -1,4 +1,4 @@
-// pagination.mjs
+// Funcion para paginar las cartas solo cuando son todas, sin filtro
 const setupPagination = (getCharacters) => {
     let currentPage = 1;
 
