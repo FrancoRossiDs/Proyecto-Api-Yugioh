@@ -9,7 +9,7 @@ const cardsByType = async (filters) => {
     const info = await res.json();
     
     let result = info.data;
-    //Si hay valor de name en el array de filtros, lo aplica a info
+    //Si hay valor de name en el array de filtros, lo aplica a info, tambien se incluyen cartas en las que su descripción incluya lo ingresado en el buscador
     if (filters.name) {
         result = result.filter(card => card.name.toLowerCase().includes(filters.name.toLowerCase())||card.desc.toLowerCase().includes(filters.name.toLowerCase()));
     }
